@@ -1,0 +1,201 @@
+ sudo chown -R 501:20 "/Users/sachinkumar/.npm"
+
+Password:
+sachinkumar@sachins-MacBook-Air-2 macOS % ./n8n-setup.sh
+======================================
+       n8n macOS Setup Script
+======================================
+[INFO] Checking macOS version...
+[INFO] macOS version: 26.0
+[STEP] Installing Xcode Command Line Tools...
+[INFO] Xcode Command Line Tools already installed
+[STEP] Installing Homebrew...
+[INFO] Homebrew already installed
+[INFO] Checking Homebrew permissions...
+[INFO] Updating Homebrew...
+==> Updating Homebrew...
+Already up-to-date.
+[STEP] Installing Node.js...
+[INFO] Node.js already installed, updating...
+Warning: node 24.6.0 already installed
+[INFO] Verifying Node.js installation...
+[INFO] Node.js version: v24.6.0
+[INFO] npm version: 11.5.1
+[INFO] Checking npm permissions...
+[WARNING] Fixing npm cache permissions...
+Password:
+[STEP] Installing n8n...
+[INFO] Installing n8n globally...
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @n8n/typeorm@0.3.20-12
+npm warn Found: @sentry/node@9.46.0
+npm warn node_modules/n8n/node_modules/@sentry/node
+npm warn   @sentry/node@"^9.42.1" from n8n@1.106.3
+npm warn   node_modules/n8n
+npm warn     n8n@"*" from the root project
+npm warn   2 more (@n8n/task-runner, n8n-core)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peerOptional @sentry/node@"<=8.x" from @n8n/typeorm@0.3.20-12
+npm warn node_modules/n8n/node_modules/@n8n/typeorm
+npm warn   @n8n/typeorm@"0.3.20-12" from n8n@1.106.3
+npm warn   node_modules/n8n
+npm warn   3 more (@n8n/backend-test-utils, @n8n/db, @n8n/n8n-nodes-langchain)
+npm warn
+npm warn Conflicting peer dependency: @sentry/node@8.55.0
+npm warn node_modules/@sentry/node
+npm warn   peerOptional @sentry/node@"<=8.x" from @n8n/typeorm@0.3.20-12
+npm warn   node_modules/n8n/node_modules/@n8n/typeorm
+npm warn     @n8n/typeorm@"0.3.20-12" from n8n@1.106.3
+npm warn     node_modules/n8n
+npm warn     3 more (@n8n/backend-test-utils, @n8n/db, @n8n/n8n-nodes-langchain)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @browserbasehq/stagehand@1.14.0
+npm warn Found: openai@5.8.1
+npm warn node_modules/n8n/node_modules/@n8n/n8n-nodes-langchain/node_modules/openai
+npm warn   openai@"5.8.1" from @n8n/n8n-nodes-langchain@1.105.3
+npm warn   node_modules/n8n/node_modules/@n8n/n8n-nodes-langchain
+npm warn     @n8n/n8n-nodes-langchain@"1.105.3" from n8n@1.106.3
+npm warn     node_modules/n8n
+npm warn   1 more (@langchain/community)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer openai@"^4.62.1" from @browserbasehq/stagehand@1.14.0
+npm warn node_modules/n8n/node_modules/@n8n/n8n-nodes-langchain/node_modules/@browserbasehq/stagehand
+npm warn   peer @browserbasehq/stagehand@"^1.0.0" from @langchain/community@0.3.47
+npm warn   node_modules/n8n/node_modules/@n8n/n8n-nodes-langchain/node_modules/@langchain/community
+npm warn
+npm warn Conflicting peer dependency: openai@4.104.0
+npm warn node_modules/openai
+npm warn   peer openai@"^4.62.1" from @browserbasehq/stagehand@1.14.0
+npm warn   node_modules/n8n/node_modules/@n8n/n8n-nodes-langchain/node_modules/@browserbasehq/stagehand
+npm warn     peer @browserbasehq/stagehand@"^1.0.0" from @langchain/community@0.3.47
+npm warn     node_modules/n8n/node_modules/@n8n/n8n-nodes-langchain/node_modules/@langchain/community
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @langchain/community@0.3.47
+npm warn Found: @huggingface/inference@2.8.0
+npm warn node_modules/n8n/node_modules/@huggingface/inference
+npm warn   @huggingface/inference@"2.8.0" from @n8n/n8n-nodes-langchain@1.105.3
+npm warn   node_modules/n8n/node_modules/@n8n/n8n-nodes-langchain
+npm warn     @n8n/n8n-nodes-langchain@"1.105.3" from n8n@1.106.3
+npm warn     node_modules/n8n
+npm warn
+npm warn Could not resolve dependency:
+npm warn peerOptional @huggingface/inference@"^4.0.5" from @langchain/community@0.3.47
+npm warn node_modules/n8n/node_modules/@n8n/n8n-nodes-langchain/node_modules/@langchain/community
+npm warn   @langchain/community@"0.3.47" from @n8n/n8n-nodes-langchain@1.105.3
+npm warn   node_modules/n8n/node_modules/@n8n/n8n-nodes-langchain
+npm warn
+npm warn Conflicting peer dependency: @huggingface/inference@4.7.1
+npm warn node_modules/@huggingface/inference
+npm warn   peerOptional @huggingface/inference@"^4.0.5" from @langchain/community@0.3.47
+npm warn   node_modules/n8n/node_modules/@n8n/n8n-nodes-langchain/node_modules/@langchain/community
+npm warn     @langchain/community@"0.3.47" from @n8n/n8n-nodes-langchain@1.105.3
+npm warn     node_modules/n8n/node_modules/@n8n/n8n-nodes-langchain
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @langchain/community@0.3.47
+npm warn Found: mongodb@6.11.0
+npm warn node_modules/n8n/node_modules/@n8n/n8n-nodes-langchain/node_modules/mongodb
+npm warn   mongodb@"6.11.0" from @n8n/n8n-nodes-langchain@1.105.3
+npm warn   node_modules/n8n/node_modules/@n8n/n8n-nodes-langchain
+npm warn     @n8n/n8n-nodes-langchain@"1.105.3" from n8n@1.106.3
+npm warn     node_modules/n8n
+npm warn
+npm warn Could not resolve dependency:
+npm warn peerOptional mongodb@"^6.17.0" from @langchain/community@0.3.47
+npm warn node_modules/n8n/node_modules/@n8n/n8n-nodes-langchain/node_modules/@langchain/community
+npm warn   @langchain/community@"0.3.47" from @n8n/n8n-nodes-langchain@1.105.3
+npm warn   node_modules/n8n/node_modules/@n8n/n8n-nodes-langchain
+npm warn
+npm warn Conflicting peer dependency: mongodb@6.18.0
+npm warn node_modules/mongodb
+npm warn   peerOptional mongodb@"^6.17.0" from @langchain/community@0.3.47
+npm warn   node_modules/n8n/node_modules/@n8n/n8n-nodes-langchain/node_modules/@langchain/community
+npm warn     @langchain/community@"0.3.47" from @n8n/n8n-nodes-langchain@1.105.3
+npm warn     node_modules/n8n/node_modules/@n8n/n8n-nodes-langchain
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated node-domexception@1.0.0: Use your platform's native DOMException instead
+npm warn deprecated are-we-there-yet@3.0.1: This package is no longer supported.
+npm warn deprecated gauge@4.0.4: This package is no longer supported.
+npm warn deprecated @npmcli/move-file@1.1.2: This functionality has been moved to @npmcli/fs
+npm warn deprecated npmlog@6.0.2: This package is no longer supported.
+npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm warn deprecated gm@1.25.1: The gm module has been sunset. Please migrate to an alternative. https://github.com/aheckmann/gm?tab=readme-ov-file#2025-02-24-this-project-is-not-maintained
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm warn deprecated lodash.get@4.4.2: This package is deprecated. Use the optional chaining (?.) operator instead.
+npm warn deprecated @aws-sdk/signature-v4@3.374.0: This package has moved to @smithy/signature-v4
+npm warn deprecated @aws-sdk/protocol-http@3.374.0: This package has moved to @smithy/protocol-http
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm warn deprecated rimraf@2.6.3: Rimraf versions prior to v4 are no longer supported
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm warn deprecated infisical-node@1.3.0: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+
+added 1976 packages in 2m
+
+230 packages are looking for funding
+  run `npm fund` for details
+[STEP] Setting up n8n directories...
+[INFO] Creating n8n configuration...
+[INFO] Creating environment configuration...
+[STEP] Setting up auto-start service...
+[INFO] Loading n8n service...
+[INFO] Waiting for n8n to start...
+[INFO] n8n service is running successfully!
+[STEP] Creating backup and maintenance scripts...
+[INFO] Setting up daily backup cron job...
+[INFO] Creating desktop shortcut...
+[STEP] Configuring macOS firewall...
+[INFO] macOS firewall is disabled
+[STEP] Final status check...
+[INFO] n8n is running successfully!
+
+======================================
+     n8n Installation Complete!
+======================================
+
+[INFO] n8n has been successfully installed and configured!
+[INFO] Access URL: http://192.168.1.40:5678
+[INFO] Desktop shortcut created: ~/Desktop/n8n.command
+
+[INFO] Service management commands:
+  Control script: /Users/sachinkumar/.n8n/control.sh {start|stop|restart|status|logs}
+  Direct commands:
+    Start:   launchctl load /Users/sachinkumar/Library/LaunchAgents/com.n8n.plist
+    Stop:    launchctl unload /Users/sachinkumar/Library/LaunchAgents/com.n8n.plist
+    Status:  pgrep -f 'n8n start'
+    Logs:    tail -f /Users/sachinkumar/.n8n/logs/n8n.log
+
+[INFO] Backup and maintenance:
+  Manual backup: /Users/sachinkumar/.n8n/backup.sh
+  Update n8n:    /Users/sachinkumar/.n8n/update.sh
+  Daily backup:  Configured via cron at 2 AM
+
+[INFO] File locations:
+  n8n data:      /Users/sachinkumar/.n8n
+  Configuration: /Users/sachinkumar/.n8n/config.json
+  Environment:   /Users/sachinkumar/.n8n/.env
+  Logs:          /Users/sachinkumar/.n8n/logs/
+  Backups:       /Users/sachinkumar/.n8n/backups/
+  Service:       /Users/sachinkumar/Library/LaunchAgents/com.n8n.plist
+
+[WARNING] IMPORTANT SECURITY NOTES:
+1. Set up SSL/TLS certificate for production use
+2. Configure proper authentication in n8n settings
+3. Consider changing the default port
+4. Set up database (PostgreSQL/MySQL) for production
+5. Configure network access restrictions if needed
+
+[INFO] Next steps:
+1. Open http://192.168.1.40:5678 in your browser
+2. Complete the initial n8n setup
+3. Configure your first workflow
+
+[INFO] Installation completed successfully!
+[INFO] Double-click n8n.command on Desktop to open n8n in browser
