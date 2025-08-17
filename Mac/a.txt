@@ -1,0 +1,20 @@
+// details:-
+username
+admin or standard
+last password change date 
+last login time 
+last logout time 
+last time password hint was chnged 
+secure token status
+user creation date
+
+operations:-
+change password with old password or wit other admin credentials
+change hint
+create user admin or standard
+change secure status token
+delete user
+
+
+/Users/sachinkumar/Desktop/scripts/change_password_hint.sh -u username -h "new hint"
+/Users/sachinkumar/Desktop/scripts/change_password_hint.sh -u username -t admin|standard
