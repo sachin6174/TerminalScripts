@@ -1,4 +1,5 @@
 #!/bin/bash
+#  sudo chown -R 501:20 "/Users/sachinkumar/.npm"
 
 set -e
 
@@ -134,8 +135,8 @@ cat > "$N8N_HOME/config.json" <<EOF
 }
 EOF
 
-# Get local IP address
-LOCAL_IP=$(ifconfig | grep "inet " | grep -v 127.0.0.1 | awk '{print $2}' | head -1)
+# Use localhost instead of local IP to avoid proxy/firewall issues
+LOCAL_IP="localhost"
 
 # Create environment file
 print_status "Creating environment configuration..."
@@ -312,7 +313,7 @@ print_status "Setting up daily backup cron job..."
 print_status "Creating desktop shortcut..."
 cat > "$HOME/Desktop/n8n.command" <<EOF
 #!/bin/bash
-open http://$LOCAL_IP:5678
+open http://localhost:5678
 EOF
 
 chmod +x "$HOME/Desktop/n8n.command"
@@ -342,7 +343,7 @@ echo "     n8n Installation Complete!"
 echo "======================================"
 echo ""
 print_status "n8n has been successfully installed and configured!"
-print_status "Access URL: http://$LOCAL_IP:5678"
+print_status "Access URL: http://localhost:5678"
 print_status "Desktop shortcut created: ~/Desktop/n8n.command"
 echo ""
 print_status "Service management commands:"
@@ -374,7 +375,7 @@ echo "4. Set up database (PostgreSQL/MySQL) for production"
 echo "5. Configure network access restrictions if needed"
 echo ""
 print_status "Next steps:"
-echo "1. Open http://$LOCAL_IP:5678 in your browser"
+echo "1. Open http://localhost:5678 in your browser"
 echo "2. Complete the initial n8n setup"
 echo "3. Configure your first workflow"
 echo ""
