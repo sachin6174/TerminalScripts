@@ -3,7 +3,8 @@
 # Domain: Media
 
 URL="$1"
-OUTPUT_DIR="${2:-"$HOME/Downloads"}"
+# Automatically save to Desktop in a dedicated folder
+OUTPUT_DIR="${2:-"$HOME/Desktop/YouTube_Downloads"}"
 
 if [[ -z "$URL" ]]; then
     echo "Usage: $0 <youtube_url> [output_directory]"
@@ -11,15 +12,15 @@ if [[ -z "$URL" ]]; then
     exit 1
 fi
 
-# 1. Check for yt-dlp
-if ! command -v yt-dlp &>/dev/null; then
-    echo "⚙️  'yt-dlp' not found. Installing..."
-    if ! command -v brew &>/dev/null; then
-        echo "❌ Homebrew is required but not installed."
-        exit 1
-    fi
-    brew install yt-dlp
-    echo "✅ yt-dlp installed."
+# We use the pre-compiled macOS binary to bypass Python 3.9 version limits on macOS
+YT_DLP_BIN="$HOME/Desktop/YouTube_Downloads/yt-dlp_bin"
+
+if [[ ! -f "$YT_DLP_BIN" ]]; then
+    echo "⚙️  Downloading latest yt-dlp engine..."
+    mkdir -p "$OUTPUT_DIR"
+    curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_macos -o "$YT_DLP_BIN"
+    chmod +x "$YT_DLP_BIN"
+    echo "✅ Engine installed."
 fi
 
 # 2. Check for ffmpeg (required for merging high-res video with audio)
@@ -31,9 +32,10 @@ fi
 
 echo "⏳ Downloading best quality video and audio from '$URL'..."
 
-# yt-dlp fetches the absolute best video and best audio separately, 
-# then uses ffmpeg to merge them into a single high-quality mp4 file.
-yt-dlp -f 'bv*+ba/b' \
+# We specifically request h264 (avc) video and m4a audio. 
+# This guarantees the downloaded .mp4 file will play natively on Mac/QuickTime!
+"$YT_DLP_BIN" -f 'bestvideo[vcodec^=avc]+bestaudio[ext=m4a]/bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' \
+       --restrict-filenames \
        --merge-output-format mp4 \
        -o "$OUTPUT_DIR/%(title)s.%(ext)s" \
        "$URL"
